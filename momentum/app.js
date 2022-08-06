@@ -114,3 +114,63 @@ const user = {
 console.log(user.name);
 user.sayHello("lynn");
 user.sayHello("nico");
+
+//return
+const calculator = {
+  plus: function(a, b) {
+    return a + b;
+  },
+  times: function(a, b) {
+    return a * b;
+  },
+  minus: function(a, b) {
+    return a - b;
+  },
+  divide: function(a, b) {
+    return a / b;
+  },
+  power: function(a, b) {
+    return a ** b;
+  },
+}
+
+const plusResult = calculator.plus(2, 3);
+const minusResult = calculator.minus(plusResult, 10);
+const timesResult = calculator.times(10, minusResult);
+const divideResult = calculator.divide(timesResult, plusResult);
+const powerResult = calculator.power(divideResult, minusResult );
+
+console.log(plusResult);
+console.log(minusResult);
+console.log(timesResult);
+console.log(divideResult);
+console.log(powerResult);
+
+// const age = 96;
+// function calculateKRAge(ageOfForeigner){
+//   return ageOfForeigner + 2;  
+// }
+
+// const krAge = calculateKRAge(age);
+// console.log(krAge);
+
+const age = parseInt(prompt("How old are you?")); //prompt 잘 안씀 옛날 방식. 꾸밀 수 없고 팝업창으로 나타남
+
+if(isNaN(age) || age < 0) {
+  console.log(prompt("Please write a real positive number"));
+} 
+else if(age < 18) {
+  console.log("You are too young.");
+}
+else if(age >= 18 && age <= 50) {
+  console.log("You can drink");
+}
+else if(age > 50 && age <= 80) {
+  console.log("You should exercise");
+}
+else if(age === 100) {
+  console.log("wow, you are wise");
+}
+else if(age > 80) {
+  console.log("You can do whatever you want.");
+} 
